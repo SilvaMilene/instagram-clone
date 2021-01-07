@@ -1,0 +1,14 @@
+<% if @success == true %>
+  $( document ).ready(function() {
+    $(".like-<%= @post_id %>").addClass("active");
+  });
+<% elsif @success == true %>
+  $( document ).ready(function() {
+    $(".like-<%= @post_id %>").removeClass("active");
+  });
+<% end %>
+$( document ).ready(function() {
+  $("#post-<%= @post_id %>").text("<%= @post_likes %> likes");
+});
+
+
